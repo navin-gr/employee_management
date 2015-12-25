@@ -1,0 +1,36 @@
+<div class="form">
+  <h3> Employee Details </h3>
+    <%= simple_form_for @emp, url: @emp.new_record? ? employees_create_path : employees_update_path(emp_id: @emp.id), :html => {:multipart => true} do |f| %>
+      <%= render "errors" %>
+
+        <%= f.input :name,:placeholder => " Enter name here.", required: true %><br>
+         
+        <%= f.input :email,:placeholder => " me@exaple.com ", type: :email %><br>
+
+        <%= f.input :designation,:placeholder => " Enter Designation here.", required: true %><br>
+
+        <%= f.input :mentor, required: true %><br>
+
+        <p>
+        <%= image_tag(@emp.profile_image_url) if @emp.profile_image? %>
+
+        <%= f.input :profile_image, required: true %>
+
+        <%= f.hidden_field :profile_image_cache %></p><br>
+
+        <p> <% if @emp.profile_image_cache.present? %>
+          <%= f.input :remove_profile_image, as: :boolean, checked_value: true, unchecked_value: false %>
+            <% end %>
+        </p>
+        OR CHOOSE REMOTE URL
+        <p>
+        <%= f.input :remote_profile_image_url %>
+        </p><br>
+
+        <br><%= f.button :submit, class: "btn btn-primary"%>
+
+     <% end %>
+</div>
+
+
+

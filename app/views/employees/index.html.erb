@@ -1,0 +1,37 @@
+<!-- <h3> Search Empolyee </h3>
+  <%#= form_tag employees_index_path,:method=>'get' do %>
+    <p>
+      <%#= text_field_tag :filter, '', placeholder: "Search...", autocomplete: :off %>
+      <button class="btn btn-primary disabled" type="submit">S E A R C H</button>
+    </p>
+  <%# end %> -->
+
+  <td> <%= link_to "ADD Employee",employees_new_path %></td>
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr class="info">
+      <th> Image </th>
+      <th> Name </th>
+      <th> Email</th>
+      <th> Designation </th>
+      <th> Mentor </th>
+      <th> Edit</th>
+      <th> Delete</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @emp.each do |e| %>
+      <tr>
+        <td><%= link_to image_tag(e.profile_image_url(:thumb)),employees_show_path(e) %></td>
+        <td> <%= e.name %> </td>
+        <td> <%= e.email %> </td>
+        <td> <%= e.designation %> </td>
+        <td> <%= e.mentor %> </td>
+        <td> <%= link_to "Edit",employees_edit_path(e) %></td>
+        <td> <%= link_to "Delete",employees_destroy_path(e), method: :delete, data: { confirm:'are u sure?' } %></td>
+      </tr>
+    <% end %>  
+
+  </tbody>
+</table>

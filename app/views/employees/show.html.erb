@@ -1,0 +1,12 @@
+<p>Employee Details</p>
+
+<p>Employee Profile Image : <%= image_tag @emp.profile_image_url(:gallary) %></p>
+<p>Employee Name : <%= @emp.name %></p>
+<p>Employee Email : <%= @emp.email %></p>
+<p>Employee Designation : <%= @emp.designation %></p>
+<p>Employee Mentor : <%= @emp.mentor %></p>
+
+
+
+
+<%= link_to "BACK", root_path %>
