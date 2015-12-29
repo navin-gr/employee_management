@@ -32,6 +32,8 @@ development:
   username: root
   password: rails
   database: Employee-Management_production
+  host: 127.0.0.1
+
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
