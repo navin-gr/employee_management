@@ -30,7 +30,7 @@ development:
   encoding: utf8
   pool: 5
   username: root
-  password: rails
+  password: 
   database: Employee-Management_production
   host: 127.0.0.1
 
