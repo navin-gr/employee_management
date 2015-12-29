@@ -18,8 +18,6 @@ class EmployeesController < ApplicationController
   end
   
   #--
-  # Created by- Navin Puttewar 
-  # Created on- 3/08/15 
   # Purpose :- To  create employee
   #++  
   def create
@@ -27,7 +25,6 @@ class EmployeesController < ApplicationController
     if @emp.valid?
       @emp.save
       EmployeesWorker.perform_async(params[:employee])
-      
       render 'show'
     else
       render 'new'

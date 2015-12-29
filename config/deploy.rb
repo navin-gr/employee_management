@@ -2,13 +2,16 @@
 lock '3.4.0'
 
 set :application, 'Employee-Management'
-set :repo_url, 'git@example.com:me/my_repo.git' #path of application git repository
+set :repo_url, 'git@github.com:navin-gr/employee_management.git' #path of application git repository
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
+
+set :branch, 'master'
+
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, '/var/www/my_app_name' # where to put your application code
+set :deploy_to, '/var/www/rails_apps/my_app_name' # where to put your application code
 
 # Default value for :scm is :git
 set :scm, :git

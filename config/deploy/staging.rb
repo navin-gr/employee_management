@@ -5,7 +5,7 @@
 
  server '127.0.0.1', user: 'rails-dev', roles: %w{app db web}, my_property: :my_value
  server '127.0.0.1', user: 'rails-dev', roles: %w{app web}, other_property: :other_value
- server '127.0.0.1', user: 'rails-dev', roles: %w{db}
+ server '127.0.0.1', user: 'rails-dev', roles: %w{db}, :primary => true
 
 
 

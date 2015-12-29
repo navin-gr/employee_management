@@ -31,9 +31,17 @@ gem "mini_magick"
 
 gem 'sidekiq'
 
+gem 'sidetiq'
+
+gem 'sidekiq-client-cli'
+
+gem 'whenever', :require => false
+
 gem 'sinatra', :require => nil
 
 gem 'capistrano', '~> 3.4.0'
+
+gem 'passenger', '~> 5.0', '>= 5.0.23'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
