@@ -6,13 +6,7 @@ set :repo_url, 'git@github.com:navin-gr/employee_management.git' #path of applic
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
-set(:rvm_type)          { :system }
-set(:rvm_ruby_string)   { "2.2.2p95" }
 
-set(:ruby_version)      { '2.2.2p95' }
-set(:rvm_path)          { "/usr/local/rvm" }
-set :ruby_path, "/usr/local/bin/ruby"
-set :rvm_install_with_sudo, true
 
 set :branch, 'master'
 
