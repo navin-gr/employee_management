@@ -3,7 +3,7 @@ lock '3.4.0'
 
 set :application, 'Employee-Management'
 set :repo_url, 'git@github.com:navin-gr/employee_management.git' #path of application git repository
-
+set :rvm_roles, [:app, :web]
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
@@ -20,7 +20,7 @@ set :scm, :git
 set :format, :pretty
 
 set :linked_files, %w{config/database.yml}
-
+set :rvm_ruby_version, 'ruby-2.2.2@latest-version'
 
 # Default value for :log_level is :debug
 # set :log_level, :debug
