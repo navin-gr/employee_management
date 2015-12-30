@@ -41,6 +41,7 @@ gem 'sinatra', :require => nil
 
 gem 'capistrano', '~> 3.4.0'
 gem 'capistrano-rails', '~> 1.1'
+gem 'rvm-capistrano', '>= 1.1.0'
 
 gem 'passenger', '~> 5.0', '>= 5.0.23'
 

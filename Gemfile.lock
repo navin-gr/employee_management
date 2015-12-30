@@ -149,6 +149,8 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
     redis (3.2.2)
+    rvm-capistrano (1.5.0)
+      capistrano (>= 2.15.4)
     sass (3.4.20)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -221,6 +223,7 @@ DEPENDENCIES
   mysql2 (~> 0.3.18)
   passenger (~> 5.0, >= 5.0.23)
   rails (= 4.2.4)
+  rvm-capistrano (>= 1.1.0)
   sass-rails (~> 5.0)
   sidekiq
   sidekiq-client-cli
