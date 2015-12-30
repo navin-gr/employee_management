@@ -44,6 +44,8 @@ gem 'capistrano-rails', '~> 1.1'
 
 gem 'passenger', '~> 5.0', '>= 5.0.23'
 
+gem 'i18n', '~> 0.7.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
