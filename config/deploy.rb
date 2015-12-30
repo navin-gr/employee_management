@@ -19,6 +19,8 @@ set :scm, :git
 # Default value for :format is :pretty
 set :format, :pretty
 
+set :linked_files, %w{config/database.yml}
+
 # Default value for :log_level is :debug
 # set :log_level, :debug
 
@@ -36,6 +38,7 @@ set :pty, true
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
+after "deploy", "deploy:migrate"
 
 namespace :deploy do
 
