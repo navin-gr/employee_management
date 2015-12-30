@@ -28,8 +28,6 @@ set :rvm_ruby_version, 'ruby-2.2.2@latest-version'
 # Default value for :pty is false
 set :pty, true
 
-config.log_level = :debug
-
 # Default value for :linked_files is []
 # set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
 
