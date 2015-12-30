@@ -1,0 +1,15 @@
+/home/rails-dev/.rvm/rubies/ruby-2.2.2/bin/ruby -r ./siteconf20151230-6647-18s1dxk.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling locker.c
+compiling byebug.c
+compiling breakpoint.c
+compiling threads.c
+compiling context.c
+linking shared-object byebug/byebug.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20151230-6647-1wto832/byebug
