@@ -39,7 +39,9 @@ set :pty, true
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
+after "deploy", "deploy:create"
 after "deploy", "deploy:migrate"
+
 
 namespace :deploy do
 
