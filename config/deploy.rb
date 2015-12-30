@@ -41,12 +41,7 @@ set :pty, true
 # set :keep_releases, 5
 
 
-  task :db_create do
-    run "cd #{current_path};RAILS_ENV=#{rails_env} bundle exec rake db:create"
-  end
-
-  after "deploy", "db_create"
-  after "deploy", "deploy:migrate"
+after "deploy", "deploy:migrate"
 
 namespace :deploy do
 
