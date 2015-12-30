@@ -39,12 +39,14 @@ set :pty, true
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
-after "deploy", "db_create"
-after "deploy", "deploy:migrate"
+
 
   task :db_create, :roles => :app do
     run "cd #{current_path};RAILS_ENV=#{rails_env} bundle exec rake db:create"
   end
+
+  after "deploy", "db_create"
+after "deploy", "deploy:migrate"
 
 namespace :deploy do
 
