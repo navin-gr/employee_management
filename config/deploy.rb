@@ -21,7 +21,7 @@ set :format, :pretty
 
 set :linked_files, %w{config/database.yml}
 
-set :bundle_flags, "--deployment --quiet --local"
+#set :bundle_flags, "--deployment --quiet --local"
 
 # Default value for :log_level is :debug
 # set :log_level, :debug
