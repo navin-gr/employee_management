@@ -25,14 +25,16 @@ development:
   password: rails
   database: Employee-Management_development
 
-  production:
+production:
   adapter: mysql2
   encoding: utf8
   pool: 5
   username: root
-  password: 
+  password: rails
   database: Employee-Management_production
-  host: 127.0.0.1
+  host: localhost
+  socket: /var/run/mysqld/mysqld.sock
+
 
 
 # Warning: The database defined as "test" will be erased and
@@ -46,13 +48,13 @@ test:
   password: rails
   database: Employee-Management_test
 
-staging:
-  adapter: mysql2
-  encoding: utf8
-  pool: 5
-  username: root
-  password: rails
-  database: Employee-Management_staging
+# staging:
+#   adapter: mysql2
+#   encoding: utf8
+#   pool: 5
+#   username: Employee-Management
+#   password: 
+#   database: Employee-Management_staging
 
 
 # As with config/secrets.yml, you never want to store sensitive information,
