@@ -22,6 +22,8 @@ set :format, :pretty
 set :linked_files, %w{config/database.yml}
 set :rvm_ruby_version, 'ruby-2.2.2@latest-version'
 
+set :passenger_restart_with_touch, true
+
 # Default value for :log_level is :debug
 # set :log_level, :debug
 
