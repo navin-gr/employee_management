@@ -24,7 +24,7 @@ class EmployeesController < ApplicationController
     @emp = Employee.new(employee_params)
     if @emp.valid?
       @emp.save
-      EmployeesWorker.perform_async(params[:employee])
+      EmployeesWorker.perform_async(@emp.id)
       render 'show'
     else
       render 'new'

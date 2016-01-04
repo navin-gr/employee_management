@@ -25,7 +25,7 @@ set :rvm_ruby_version, 'ruby-2.2.2@latest-version'
 set :passenger_restart_with_touch, true
 
 # Default value for :log_level is :debug
-# set :log_level, :debug
+set :log_level, :debug
 
 # Default value for :pty is false
 set :pty, true
@@ -44,6 +44,7 @@ set :pty, true
 
 
 after "deploy", "deploy:migrate"
+after 'deploy:publishing', 'deploy:restart'
 
 namespace :deploy do
 
