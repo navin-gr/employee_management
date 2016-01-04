@@ -44,6 +44,9 @@ set :pty, true
 
 
 after "deploy", "deploy:migrate"
+after "deploy:cp_assets", "deploy:restart"
+
+after "deploy", "deploy:cleanup"
 after 'deploy:publishing', 'deploy:restart'
 
 namespace :deploy do
